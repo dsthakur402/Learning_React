@@ -1,32 +1,25 @@
 import { useState } from "react";
 import "./Lottery.css";
+import { generateNumber, sum, winningCond} from "./helper";
+import Ticket from "./Ticket";
 
-export default function Lottery() {
-    let [num, setNum] = useState(0);
-    let [win, setWin] = useState(false); 
 
-    
-    let generateNumber = () => {
-        let n = Math.floor(Math.random() * 1000) + 1;
-        setNum((prev) => n);
-        setWin(() => {
-            return n < 100;
-        });
+export default function Lottery({n=3}) {
+    let [ticket, setNum] = useState(generateNumber(n));
+    let isWinning = winningCond(ticket); 
+
+    let buyTicket = () => {
+        setNum(generateNumber(n));
     };
 
     return (
         <div>
             <h1>WELCOME! to satta bazar</h1>
             <div>
-                <input
-                    type="text"
-                    className="lotteryNumber"
-                    value={num > 0 ? num : "Your lottery no."}
-                    readOnly
-                />
+                <Ticket ticket={ticket}/>
             </div>
-            <button onClick={generateNumber}>Generate Lottery No.</button>
-            {win && <h1> You won! </h1>}
+            <button onClick={buyTicket}>Generate Lottery No.</button>
+            {isWinning ? <h1> You won! </h1> : <h3>Better Luck! next time</h3> }
         </div>
     );
 }

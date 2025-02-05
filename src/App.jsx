@@ -8,7 +8,12 @@ import './App.css';
 // import Like from './Like';
 // import Ludo from './Ludo';
 // import TodoList from './TodoList';
-import Lottery from './Lottery';
+// import Lottery from './Lottery';
+// import Ticket from './Ticket';
+// import { winningCond } from './helper';
+// import Lottery2 from './Lottery2';
+import Form from './Form';
+
 function App() {
   return (
     <>
@@ -20,7 +25,10 @@ function App() {
       <Like /> */}
       {/* <Ludo />   */}
       {/* <TodoList /> */}
-      <Lottery />
+      {/* <Lottery /> */}
+      {/* <Lottery2 n={6}/> */}
+      {/* <Lottery /> */}
+      <Form />
     </>
   );
 }
