@@ -1,0 +1,13 @@
+.Price{
+    background-color: yellow;
+    height: 20px;
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+}
+.oldPrice{
+    text-decoration: line-through;
+}
+
+.newPrice{
+    font-weight: bold ;
+}
