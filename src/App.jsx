@@ -7,7 +7,8 @@ import './App.css';
 // import Cards from './Cards';
 // import Like from './Like';
 // import Ludo from './Ludo';
-import TodoList from './TodoList';
+// import TodoList from './TodoList';
+import Lottery from './Lottery';
 function App() {
   return (
     <>
@@ -18,8 +19,8 @@ function App() {
       {/* <Cards />
       <Like /> */}
       {/* <Ludo />   */}
-      <TodoList />
-
+      {/* <TodoList /> */}
+      <Lottery />
     </>
   );
 }
